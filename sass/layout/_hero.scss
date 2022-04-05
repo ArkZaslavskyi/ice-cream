@@ -1,0 +1,129 @@
+// === HERO ===
+.hero__section {
+    height: 444px;
+    background-color: var(--color-accent-light);
+    display: none;
+}
+.hero__container {
+    padding-top: 136px;
+}
+
+.hero__left-content {
+    z-index: 100;
+}
+
+.hero__title {
+    font-family: var(--font-accent);
+    @include setFont(26px, 30px, 400, 0.04em);
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.hero__title--accent {
+    @include setFont(48px, 46px, null, 0);
+    color: var(--color-accent);
+}
+
+.hero__btn-wrapper {
+    margin-top: 20px;
+    display: flex;
+}
+
+// Кнопки секции HERO
+
+.hero-btn__list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-btn__item {
+ 
+    & + & {
+        margin-left: 8px;
+    }
+}
+
+.hero-btn__link {
+    height: 24px;
+
+    @include desk {
+        height: 40px;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 22px;
+    // border: none;   
+
+    font-family: var(--font-base);
+    font-style: normal;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+
+    @include desk {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+}
+
+.hero-btn__link--dark {
+    width: 62px;
+    
+    @include desk {
+        width: 107px;
+    }
+    
+    color: #ffffff;
+    background-color: var(--color-accent);
+    
+    &:hover,
+    &:focus {
+        background-color: var(--color-accent-dark);
+    }
+}
+
+.hero-btn__link--light {
+    width: 83px;
+    
+    @include desk {
+        width: 138px;
+    }
+
+    color: var(--color-accent);
+    background-color: #ffffff;
+
+    &:hover,
+    &:focus {
+        background-color: var(--btn-color-light-accent);
+    }
+}
+
+// icecream-container
+
+.hero__icecream-container {
+    position: absolute;
+    width: 346px;
+    height: 419px;
+    left: 36px;
+    top: 83px; // 25px от верха hero, 83px от верха экрана
+}
+
+.hero__icecream-picture {
+    position: absolute;
+    width: 171px;
+    height: 410px;
+    left: 81px;
+    top: 9px;
+}
+.hero__icecream-circle {
+    width: 346px;
+    height: 344px;
+    background-color: var(--color-accent-medium);
+    border-radius: 50%;
+}

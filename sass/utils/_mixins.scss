@@ -1,0 +1,50 @@
+// Миксины для медиа-правил в "точках перелома"
+
+// Смартфон
+@mixin smartphone {
+    @media screen and (min-width: $mobile) {
+        @content;
+    }
+}
+
+// Планшет
+@mixin tab {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+// Десктоп
+@mixin desk {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+// Миксин для компактной записи параметров шрифта
+@mixin setFont($fs, $lh, $fw, $ls) {
+    font-size: $fs;
+    line-height: $lh / $fs;
+    font-weight: $fw;
+    letter-spacing: $ls;
+}
+
+// Миксин для фонового 2x-изображения на Ретине
+// 
+// Использование в файле стилей:
+// 
+// background-image: url('img@1x');
+// @include retinaBg {
+//     background-image: url('img@2x');
+// }
+
+@mixin retinaBg {
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
