@@ -4,6 +4,7 @@
     padding-right: 20px;
 
     outline: 1px solid tomato;
+    
     @include smartphone {
         width: $mobile;
 
